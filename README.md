@@ -1,4 +1,4 @@
-# TaskFlow AI — TypeScript Task Manager with DSA-backed Search & Scheduling
+# TodoAppPro — TypeScript Task Manager with DSA-backed Search & Scheduling
 
 Production app demonstrating 19 Data Structures & Algorithms applied to real features (Trie autocomplete, heap scheduling, graph deps). Deployed at [vijayg.dev/todoapppro](https://vijayg.dev/todoapppro).
 
