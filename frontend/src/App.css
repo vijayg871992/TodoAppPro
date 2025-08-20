@@ -1,0 +1,182 @@
+/* Custom styles for TodoAppPro */
+
+.task-priority-critical {
+  @apply border-l-red-500 bg-red-50 dark:bg-red-900/10;
+}
+
+.task-priority-high {
+  @apply border-l-orange-500 bg-orange-50 dark:bg-orange-900/10;
+}
+
+.task-priority-medium {
+  @apply border-l-yellow-500 bg-yellow-50 dark:bg-yellow-900/10;
+}
+
+.task-priority-low {
+  @apply border-l-gray-300 bg-gray-50 dark:bg-gray-800;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none;
+}
+
+/* Toast customization */
+.Toastify__toast-theme--auto {
+  @apply dark:bg-gray-800 dark:text-white;
+}
+
+/* Force visible text in toasts */
+.Toastify__toast {
+  font-family: inherit !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.Toastify__toast--success {
+  background: #10b981 !important;
+  color: white !important;
+  border: 1px solid #059669 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.Toastify__toast--error {
+  background: #ef4444 !important;
+  color: white !important;
+  border: 1px solid #dc2626 !important;
+}
+
+.Toastify__toast--info {
+  background: #3b82f6 !important;
+  color: white !important;
+  border: 1px solid #2563eb !important;
+}
+
+.Toastify__toast-body {
+  color: inherit !important;
+  font-weight: 500 !important;
+  padding: 8px 12px !important;
+  margin: 0 !important;
+}
+
+.Toastify__toast-icon {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 8px !important;
+}
+
+/* Dark mode toast adjustments */
+@media (prefers-color-scheme: dark) {
+  .Toastify__toast--success {
+    background: #059669 !important;
+    border-color: #047857 !important;
+  }
+  
+  .Toastify__toast--error {
+    background: #dc2626 !important;
+    border-color: #b91c1c !important;
+  }
+  
+  .Toastify__toast--info {
+    background: #2563eb !important;
+    border-color: #1d4ed8 !important;
+  }
+}
+
+/* Global scrollbar improvements for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dark mode scrollbars */
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-color: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+.dark * {
+  scrollbar-color: #6b7280 #374151;
+}
+
+/* Dropdown option styling */
+select option {
+  background-color: white !important;
+  color: #374151 !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  border: none !important;
+}
+
+.dark select option {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+}
+
+/* Ensure main page dropdowns have lower z-index than modals */
+select {
+  position: relative;
+  z-index: 10;
+}
+
+/* Modal z-index hierarchy */
+.modal-backdrop {
+  z-index: 9998 !important;
+}
+
+.modal-content {
+  z-index: 9999 !important;
+}
+
+.modal-dropdown {
+  z-index: 10000 !important;
+}
+
+/* Loading animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
